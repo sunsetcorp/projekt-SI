@@ -113,8 +113,7 @@ class AccountService implements AccountServiceInterface
             $this->entityManager->persist($user);
             $this->entityManager->flush();
 
-            // Flash message in a service requires the session, not ideal in service, move this to controller
-            // $this->addFlash('success', 'Account updated successfully.');
+
 
             return new Response($this->twig->render('account/account.html.twig', [
                 'user' => $user,
