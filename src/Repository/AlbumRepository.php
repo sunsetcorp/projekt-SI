@@ -124,11 +124,13 @@ class AlbumRepository extends ServiceEntityRepository
         $qb = $this->createQueryBuilder('album');
 
         return (int) $qb->select($qb->expr()->countDistinct('album.id'))
-            ->where('album.tag = :tag')
-            ->setParameter('tag', $tag)
+            ->innerJoin('album.tags', 't')
+            ->where('t.id = :tagId')
+            ->setParameter('tagId', $tag->getId())
             ->getQuery()
             ->getSingleScalarResult();
     }
+    
     /**
      * Save entity.
      *
