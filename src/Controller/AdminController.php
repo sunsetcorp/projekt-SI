@@ -5,11 +5,13 @@
  */
 
 namespace App\Controller;
-
+use Symfony\Component\HttpKernel\Attribute\MapQueryParameter;
 use App\Entity\User;
 use App\Form\Type\UserEditType;
 use App\Service\AdminServiceInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpKernel\Attribute\MapQueryParameter;
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -54,7 +56,25 @@ class AdminController extends AbstractController
         ]);
     }
 
+     /**
+     * Display the list of users for administrators.
+     *
+     * @return Response The response object
+     *
+     * */
+    #[Route('/admin/users', name: 'admin_user_list')]
+    public function userList(#[MapQueryParameter] int $page = 1): Response
+    {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
 
+        $limit = 10;
+        $pagination = $this->adminService->getPaginatedUsers($page, $limit);
+
+        return $this->render('admin/user_list.html.twig', [
+            'pagination' => $pagination,
+        ]);
+    }
+    
     /**
      * Edit user details by administrators.
      *
@@ -83,7 +103,7 @@ class AdminController extends AbstractController
                 $this->adminService->updateUser($user);
             }
 
-            $this->addFlash('success', 'User updated successfully.');
+            $this->addFlash('success', 'Edycja powiodla sie.');
 
             return $this->redirectToRoute('admin_user_list');
         }
