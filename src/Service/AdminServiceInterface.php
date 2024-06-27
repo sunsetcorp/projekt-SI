@@ -7,6 +7,7 @@
 namespace App\Service;
 
 use App\Entity\User;
+use Knp\Component\Pager\Pagination\PaginationInterface;
 
 /**
  * Interface AdminServiceInterface
@@ -21,7 +22,17 @@ interface AdminServiceInterface
      * @return User[] The array of User objects representing all users
      */
     public function getAllUsers(): array;
-
+    
+    /**
+     * Retrieves paginated users from the database.
+     *
+     * @param int $page The current page number
+     * @param int $limit The number of users per page
+     *
+     * @return PaginationInterface The paginator object containing the users
+     */
+    public function getPaginatedUsers(int $page = 1, int $limit = 10): PaginationInterface;
+    
     /**
      * Updates the user entity in the database.
      *
