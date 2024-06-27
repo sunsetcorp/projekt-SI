@@ -50,9 +50,7 @@ class CategoryService implements CategoryServiceInterface
      */
     public function getPaginatedList(int $page): PaginationInterface
     {
-        $queryBuilder = $this->entityManager->getRepository(Category::class)->createQueryBuilder('c');
-
-        return $this->paginator->paginate($queryBuilder, $page, 10); // Limit per page
+       return $this->paginator->paginate($this->categoryRepository->queryAll(), $page, 10);
     }
 
     /**
