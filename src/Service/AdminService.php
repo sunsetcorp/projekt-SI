@@ -9,6 +9,8 @@ namespace App\Service;
 use App\Entity\User;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+use Knp\Component\Pager\PaginatorInterface;
+use Knp\Component\Pager\Pagination\PaginationInterface;
 
 /**
  * Service for administrative operations on users.
@@ -17,6 +19,7 @@ class AdminService implements AdminServiceInterface
 {
     private EntityManagerInterface $entityManager;
     private UserPasswordHasherInterface $passwordHasher;
+    private PaginatorInterface $paginator;
 
 
     /**
@@ -24,11 +27,13 @@ class AdminService implements AdminServiceInterface
      *
      * @param EntityManagerInterface      $entityManager  The entity manager for database operations
      * @param UserPasswordHasherInterface $passwordHasher The password hasher for hashing user passwords
+     * @param PaginatorInterface $paginator The paginator service
      */
-    public function __construct(EntityManagerInterface $entityManager, UserPasswordHasherInterface $passwordHasher)
+    public function __construct(EntityManagerInterface $entityManager, UserPasswordHasherInterface $passwordHasher, PaginatorInterface $paginator)
     {
         $this->entityManager = $entityManager;
         $this->passwordHasher = $passwordHasher;
+        $this->paginator = $paginator;
     }
 
     /**
@@ -39,6 +44,26 @@ class AdminService implements AdminServiceInterface
     public function getAllUsers(): array
     {
         return $this->entityManager->getRepository(User::class)->findAll();
+    }
+
+        /**
+     * Retrieves paginated users from the database.
+     *
+     * @param int $page The current page number
+     * @param int $limit The number of users per page
+     *
+     * @return PaginationInterface The paginator object containing the users
+     */
+    public function getPaginatedUsers(int $page = 1, int $limit = 10): PaginationInterface
+    {
+        $queryBuilder = $this->entityManager->createQueryBuilder()
+            ->select('u')
+            ->from(User::class, 'u')
+            ->orderBy('u.id', 'DESC');
+
+        $pagination = $this->paginator->paginate($queryBuilder, $page, $limit);
+
+        return $pagination;
     }
 
     /**
