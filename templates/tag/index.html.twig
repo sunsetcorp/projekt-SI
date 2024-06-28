@@ -17,9 +17,11 @@
             {{ knp_pagination_render(pagination) }}
         </div>
         <div class="action create">
-            <a class="btn btn-outline-success" href="{{ url('tag_create') }}" title="{{ 'action.create'|trans }}">
-                {{ 'action.create'|trans }}
-            </a>
+            {% if is_granted('ROLE_ADMIN') %}
+                <a class="btn btn-outline-success" href="{{ url('tag_create') }}" title="{{ 'action.create'|trans }}">
+                    {{ 'action.create'|trans }}
+                </a>
+            {% endif %}
         </div>
         <table class="table table-striped">
             <thead>
