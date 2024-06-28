@@ -1,0 +1,146 @@
+   1) src\Command\GenerateAlbumSlugsCommand.php ([33mno_superfluous_phpdoc_tags, phpdoc_summary, phpdoc_trim[39m)
+   2) src\Command\GenerateCategorySlugsCommand.php ([33mclass_attributes_separation[39m)
+   3) src\Controller\AccountController.php ([33mclass_attributes_separation, align_multiline_comment, phpdoc_summary, phpdoc_trim, no_extra_blank_lines[39m)
+   4) src\Controller\AdminController.php ([33mclass_attributes_separation, align_multiline_comment, phpdoc_summary, phpdoc_trim, no_unused_imports, phpdoc_align[39m)
+   5) src\Controller\AlbumController.php ([33mclass_attributes_separation, single_space_around_construct, array_indentation, phpdoc_trim, no_unused_imports, no_extra_blank_lines, phpdoc_align[39m)
+   6) src\Controller\CategoryController.php ([33mclass_attributes_separation, phpdoc_to_comment, phpdoc_trim, no_unused_imports, no_blank_lines_after_phpdoc, no_extra_blank_lines, blank_line_before_statement, phpdoc_align[39m)
+   7) src\Controller\CommentController.php ([33malign_multiline_comment[39m)
+   8) src\Controller\DefaultController.php ([33mphpdoc_summary[39m)
+   9) src\Controller\ErrorController.php ([33mphpdoc_summary[39m)
+  10) src\Controller\RegistrationController.php ([33mphpdoc_summary[39m)
+  11) src\Controller\SecurityController.php ([33mclass_attributes_separation, phpdoc_summary[39m)
+  12) src\Controller\TagController.php ([33mclass_attributes_separation, align_multiline_comment[39m)
+  13) src\DataFixtures\AppFixtures.php ([33mphpdoc_summary[39m)
+  14) src\DataFixtures\UserFixtures.php ([33mincrement_style, phpdoc_summary[39m)
+  15) src\Entity\Album.php ([33mclass_attributes_separation, single_space_around_construct, no_superfluous_phpdoc_tags, phpdoc_summary, phpdoc_separation, phpdoc_trim, no_blank_lines_after_phpdoc, no_extra_blank_lines[39m)
+  16) src\Entity\Category.php ([33mclass_attributes_separation, single_space_around_construct, no_superfluous_phpdoc_tags, phpdoc_trim, no_blank_lines_after_phpdoc, no_extra_blank_lines[39m)
+  17) src\Entity\Comment.php ([33mclass_attributes_separation, no_superfluous_phpdoc_tags, phpdoc_trim, no_extra_blank_lines[39m)
+  18) src\Entity\Enum\UserRole.php ([33mclass_attributes_separation, align_multiline_comment[39m)
+  19) src\Entity\Tag.php ([33mclass_attributes_separation, single_space_around_construct, no_superfluous_phpdoc_tags, phpdoc_trim, no_unused_imports, no_blank_lines_after_phpdoc[39m)
+  20) src\Entity\User.php ([33mclass_attributes_separation, no_superfluous_phpdoc_tags, phpdoc_trim, phpdoc_trim_consecutive_blank_line_separation[39m)
+  21) src\Form\Type\AccountType.php ([33malign_multiline_comment, phpdoc_annotation_without_dot[39m)
+  22) src\Form\Type\AlbumType.php ([33mclass_attributes_separation, array_indentation, no_unused_imports, no_extra_blank_lines[39m)
+  23) src\Form\Type\CategoryType.php ([33marray_indentation[39m)
+  24) src\Form\Type\CommentType.php ([33mphpdoc_annotation_without_dot[39m)
+  25) src\Form\Type\RegistrationFormType.php ([33mphpdoc_annotation_without_dot[39m)
+  26) src\Form\Type\TagType.php ([33marray_indentation[39m)
+  27) src\Form\Type\UserEditType.php ([33mclass_attributes_separation, phpdoc_annotation_without_dot[39m)
+  28) src\Repository\AlbumRepository.php ([33mclass_attributes_separation, fully_qualified_strict_types, no_superfluous_phpdoc_tags, nullable_type_declaration_for_default_null_value, phpdoc_trim_consecutive_blank_line_separation[39m)
+  29) src\Repository\CategoryRepository.php ([33mclass_attributes_separation, align_multiline_comment, nullable_type_declaration_for_default_null_value, no_unused_imports[39m)
+  30) src\Repository\CommentRepository.php ([33mclass_attributes_separation[39m)
+  31) src\Repository\TagRepository.php ([33mno_superfluous_phpdoc_tags, phpdoc_trim[39m)
+  32) src\Repository\UserRepository.php ([33mclass_attributes_separation[39m)
+  33) src\Security\AccessDeniedHandler.php ([33mclass_attributes_separation, phpdoc_summary[39m)
+  34) src\Security\AuthenticationEntryPoint.php ([33mclass_attributes_separation, phpdoc_summary[39m)
+  35) src\Security\LoginFormAuthenticator.php ([33mclass_attributes_separation[39m)
+  36) src\Security\Voter\AlbumVoter.php ([33mclass_attributes_separation, yoda_style[39m)
+  37) src\Service\AccountService.php ([33mclass_attributes_separation, phpdoc_to_comment, no_trailing_comma_in_singleline, no_extra_blank_lines[39m)
+  38) src\Service\AccountServiceInterface.php ([33mphpdoc_summary[39m)
+  39) src\Service\AdminService.php ([33mclass_attributes_separation[39m)
+  40) src\Service\AdminServiceInterface.php ([33mphpdoc_summary[39m)
+  41) src\Service\AlbumService.php ([33mclass_attributes_separation, align_multiline_comment[39m)
+  42) src\Service\AlbumServiceInterface.php ([33mclass_attributes_separation, align_multiline_comment[39m)
+  43) src\Service\CategoryService.php ([33mclass_attributes_separation, align_multiline_comment, fully_qualified_strict_types, phpdoc_summary, types_spaces[39m)
+  44) src\Service\CategoryServiceInterface.php ([33mclass_attributes_separation, align_multiline_comment[39m)
+  45) src\Service\CommentService.php ([33mphpdoc_summary[39m)
+  46) src\Service\CommentServiceInterface.php ([33mclass_attributes_separation, align_multiline_comment, phpdoc_summary[39m)
+  47) src\Service\RegistrationService.php ([33mno_superfluous_phpdoc_tags, phpdoc_summary, phpdoc_trim, no_extra_blank_lines[39m)
+  48) src\Service\RegistrationServiceInterface.php ([33mphpdoc_summary[39m)
+  49) src\Service\SecurityService.php ([33mclass_attributes_separation, phpdoc_summary[39m)
+  50) src\Service\SecurityServiceInterface.php ([33mphpdoc_summary[39m)
+  51) src\Service\TagService.php ([33mclass_attributes_separation, align_multiline_comment, phpdoc_summary, yoda_style, no_unused_imports[39m)
+  52) src\Service\TagServiceInterface.php ([33mclass_attributes_separation, align_multiline_comment[39m)
+
+Found 52 of 54 files that can be fixed in 5.314 seconds, 18.00 MB memory used
+
+FILE: C:\xampp\htdocs\projekt-SI-main\src\Controller\AlbumController.php
+---------------------------------------------------------------------------------------------------------------
+FOUND 30 ERRORS AFFECTING 19 LINES
+---------------------------------------------------------------------------------------------------------------
+  40 | ERROR | [x] Expected 11 spaces after parameter type; 1 found
+  40 | ERROR | [x] Expected 2 spaces after parameter name; 1 found
+  41 | ERROR | [x] Expected 4 spaces after parameter type; 1 found
+  41 | ERROR | [x] Expected 4 spaces after parameter name; 1 found
+  50 | ERROR | [x] Expected 4 spaces after parameter type; 1 found
+  51 | ERROR | [x] Expected 7 spaces after parameter name; 1 found
+  52 | ERROR | [x] Expected 12 spaces after parameter type; 1 found
+  52 | ERROR | [x] Expected 9 spaces after parameter name; 1 found
+  86 | ERROR | [x] Expected 6 spaces after parameter type; 1 found
+  86 | ERROR | [x] Expected 7 spaces after parameter name; 1 found
+ 115 | ERROR | [x] Expected 13 spaces after parameter type; 1 found
+ 115 | ERROR | [x] Expected 14 spaces after parameter name; 1 found
+ 117 | ERROR | [x] Expected 3 spaces after parameter type; 1 found
+ 117 | ERROR | [x] Expected 3 spaces after parameter name; 1 found
+ 121 | ERROR | [x] There must be no blank lines after the function comment
+ 144 | ERROR | [x] Expected 20 spaces after parameter type; 1 found
+ 144 | ERROR | [x] Expected 7 spaces after parameter name; 1 found
+ 145 | ERROR | [x] Expected 7 spaces after parameter name; 1 found
+ 146 | ERROR | [x] Expected 15 spaces after parameter type; 1 found
+ 182 | ERROR | [x] Expected 13 spaces after parameter type; 1 found
+ 182 | ERROR | [x] Expected 13 spaces after parameter name; 1 found
+ 215 | ERROR | [x] Expected 0 spaces before closing parenthesis; 1 found
+ 215 | ERROR | [x] Expected 0 spaces before closing parenthesis; 1 found
+ 221 | ERROR | [ ] Do not use else, elseif, break after if and case conditions which return or throw something
+ 253 | ERROR | [x] Expected 3 spaces after parameter type; 1 found
+ 253 | ERROR | [x] Expected 3 spaces after parameter name; 1 found
+ 263 | ERROR | [ ] Do not use else, elseif, break after if and case conditions which return or throw something
+ 302 | ERROR | [x] Expected 3 spaces after parameter type; 1 found
+ 302 | ERROR | [x] Expected 3 spaces after parameter name; 1 found
+ 312 | ERROR | [ ] Do not use else, elseif, break after if and case conditions which return or throw something
+---------------------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 27 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+---------------------------------------------------------------------------------------------------------------
+
+
+FILE: C:\xampp\htdocs\projekt-SI-main\src\Controller\CategoryController.php
+---------------------------------------------------------------------------------------------------------------
+FOUND 20 ERRORS AFFECTING 15 LINES
+---------------------------------------------------------------------------------------------------------------
+  41 | ERROR | [x] Expected 6 spaces after parameter type; 1 found
+  41 | ERROR | [x] Expected 6 spaces after parameter name; 1 found
+  61 | ERROR | [x] Missing blank line before return statement
+  68 | ERROR | [x] Expected 4 spaces after parameter type; 1 found
+  68 | ERROR | [x] Expected 4 spaces after parameter name; 1 found
+  69 | ERROR | [x] Expected 16 spaces after parameter type; 1 found
+  69 | ERROR | [x] Expected 17 spaces after parameter name; 1 found
+  83 | ERROR | [x] Missing blank line before return statement
+  96 | ERROR | [x] Expected 0 spaces before closing parenthesis; 1 found
+  96 | ERROR | [x] Expected 0 spaces before closing parenthesis; 1 found
+ 102 | ERROR | [ ] Do not use else, elseif, break after if and case conditions which return or throw something
+ 110 | ERROR | [x] Missing blank line before return statement
+ 119 | ERROR | [x] Expected 2 spaces after parameter type; 1 found
+ 119 | ERROR | [x] Expected 2 spaces after parameter name; 1 found
+ 123 | ERROR | [x] There must be no blank lines after the function comment
+ 130 | ERROR | [ ] Do not use else, elseif, break after if and case conditions which return or throw something
+ 140 | ERROR | [x] Missing blank line before return statement
+ 164 | ERROR | [ ] Do not use else, elseif, break after if and case conditions which return or throw something
+ 168 | ERROR | [x] Missing blank line before return statement
+ 179 | ERROR | [x] Missing blank line before return statement
+---------------------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 17 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+---------------------------------------------------------------------------------------------------------------
+
+
+FILE: C:\xampp\htdocs\projekt-SI-main\src\Controller\RegistrationController.php
+----------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------------------------------------------
+ 54 | ERROR | Do not use else, elseif, break after if and case conditions which return or throw something
+----------------------------------------------------------------------------------------------------------
+
+Time: 1.86 secs; Memory: 10MB
+
+ ------- -------- ---- ---------------------- 
+ [32m State [39m [32m Domain [39m [32m Id [39m [32m Message Preview (en) [39m 
+ ------- -------- ---- ---------------------- 
+
+ ------- -------- ---- ---------------------- ------------------------------- 
+ [32m State [39m [32m Domain [39m [32m Id [39m [32m Message Preview (pl) [39m [32m Fallback Message Preview (en) [39m 
+ ------- -------- ---- ---------------------- ------------------------------- 
+
+
+[37;41m                                                                                                                        [39;49m
+[37;41m [ERROR] The version "latest" couldn't be reached, there are no registered migrations.                                  [39;49m
+[37;41m                                                                                                                        [39;49m
+
+   [33m>[39m [32mpurging database[39m
