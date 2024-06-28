@@ -63,7 +63,7 @@ class AccountController extends AbstractController
 
 
         if ($request->isMethod('POST') && $response instanceof RedirectResponse) {
-            $this->addFlash('success', $this->translator->trans('message.deleted_successfully'));
+            $this->addFlash('success', $this->translator->trans('message.edited_successfully'));
         }
 
         return $response;
