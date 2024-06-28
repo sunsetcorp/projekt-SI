@@ -11,6 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * Class AccountController
@@ -19,16 +20,19 @@ use Symfony\Component\Routing\Annotation\Route;
 class AccountController extends AbstractController
 {
     private AccountServiceInterface $accountService;
+    private TranslatorInterface $translator;
 
 
     /**
      * AccountController constructor.
      *
      * @param AccountServiceInterface $accountService The account service used for business logic
+     * @param TranslatorInterface     $translator        The translator
      */
-    public function __construct(AccountServiceInterface $accountService)
+    public function __construct(AccountServiceInterface $accountService, TranslatorInterface $translator)
     {
         $this->accountService = $accountService;
+        $this->translator = $translator;
     }
 
     /**
@@ -51,7 +55,6 @@ class AccountController extends AbstractController
      *
      * @return Response The response object
      *
-     * @Route("/account/edit", name="app_account_edit")
      */
     #[Route('/account/edit', name: 'app_account_edit')]
     public function edit(Request $request): Response
@@ -60,7 +63,7 @@ class AccountController extends AbstractController
 
 
         if ($request->isMethod('POST') && $response instanceof RedirectResponse) {
-            $this->addFlash('success', 'Account updated successfully.');
+            $this->addFlash('success', $this->translator->trans('message.deleted_successfully'));
         }
 
         return $response;
